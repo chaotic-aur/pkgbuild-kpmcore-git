@@ -9,8 +9,8 @@ url="https://www.kde.org/applications/system/kdepartitionmanager/"
 license=(GPL2)
 depends=(smartmontools kcoreaddons-git kwidgetsaddons-git ki18n-git polkit-qt5 qca-qt5-git)
 makedepends=(extra-cmake-modules-git git)
-provides=(kpmcore)
-conflcits=(kpmcore)
+conflicts=(${pkgname%-git})
+provides=(${pkgname%-git})
 optdepends=('e2fsprogs: ext2/3/4 support'
 	    'xfsprogs: XFS support'
 	    'jfsutils: JFS support'
